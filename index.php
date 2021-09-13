@@ -159,13 +159,15 @@ function getCalendarContent($classes)
     $calendar .= "PRODID:-//ZContent.net//Zap Calendar 1.0//EN\n";
     $calendar .= "CALSCALE:GREGORIAN\n";
     $calendar .= "METHOD:PUBLISH\n";
+    $calendar .= "X-WR-TIMEZONE:Europe/Paris\n";
+    $calendar .= "X-WR-CALNAME:Epsi agenda\n";
+    $calendar .= "X-WR-CALDESC:Epsi Calendar\n";
 
     foreach ($classes as $class) {
         $calendar .= "BEGIN:VEVENT\n";
         $calendar .= "STATUS:CONFIRMED\n";
         $calendar .= "UID:" . uniqid() . "\n";
         $calendar .= "DTSTAMP:" . (new DateTime())->format('Ymd\THis\Z') . "\n";
-        $calendar .= "X-WR-TIMEZONE:Europe/Paris\n";
 
         foreach ($class as $key => $value) {
             $calendar .= "$key:$value\n";
