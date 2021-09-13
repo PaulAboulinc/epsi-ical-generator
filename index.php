@@ -161,7 +161,7 @@ function getCalendarContent($classes)
     $calendar .= "METHOD:PUBLISH\n";
     $calendar .= "X-WR-TIMEZONE:Europe/Paris\n";
     $calendar .= "X-WR-CALNAME:Epsi agenda\n";
-    $calendar .= "X-WR-CALDESC:Epsi Calendar\n";
+    $calendar .= "X-WR-CALDESC:Epsi agenda\n";
 
     foreach ($classes as $class) {
         $calendar .= "BEGIN:VEVENT\n";
